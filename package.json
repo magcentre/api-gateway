@@ -1,0 +1,18 @@
+{
+  "name": "api-gateway",
+  "version": "1.0.0",
+  "description": "This micro-service is intededn to provide api gateway for other services.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "api-gateway"
+  ],
+  "author": "Magcentre",
+  "license": "ISC",
+  "dependencies": {
+    "fast-gateway": "^3.0.1",
+    "@magcentre/logger-helper": "^1.0.0"
+  }
+}
