@@ -1,4 +1,4 @@
 module.exports = {
-    prefix: '/object-writer',
-    target: 'http://localhost:5001/',
+  prefix: '/object-writer',
+  target: 'http://localhost:5001/',
 };
