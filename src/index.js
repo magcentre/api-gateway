@@ -4,12 +4,7 @@ const logger = require('@magcentre/logger-helper');
 
 const serviceRoutes = require('./route.generator');
 
-const loggerMiddleWare = require('./middleware/logger');
-
 const service = gateway({
-  middlewares: [
-    loggerMiddleWare,
-  ],
   routes: serviceRoutes,
 });
 
