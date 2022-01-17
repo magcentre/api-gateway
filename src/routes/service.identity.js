@@ -1,4 +1,4 @@
 module.exports = {
   prefix: '/identity',
-  target: 'http://localhost:5004',
+  target: 'http://object-identity:5004',
 };

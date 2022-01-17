@@ -1,4 +1,4 @@
 module.exports = {
   prefix: '/object-reader',
-  target: 'http://localhost:5002',
+  target: 'http://object-reader:5002',
 };
