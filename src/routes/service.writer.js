@@ -1,4 +1,6 @@
+const config = require('../config');
+
 module.exports = {
-  prefix: '/object-writer',
-  target: 'http://object-writer:5001',
+  prefix: '/container',
+  target: config.objectWriter,
 };

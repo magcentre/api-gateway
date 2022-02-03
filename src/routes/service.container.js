@@ -1,4 +1,6 @@
+const config = require('../config');
+
 module.exports = {
   prefix: '/container',
-  target: 'http://object-container:5005',
+  target: config.objectContainer,
 };

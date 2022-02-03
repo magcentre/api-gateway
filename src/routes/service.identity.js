@@ -1,4 +1,6 @@
+const config = require('../config');
+
 module.exports = {
-  prefix: '/identity',
-  target: 'http://object-identity:5004',
+  prefix: '/container',
+  target: config.objectIdentity,
 };

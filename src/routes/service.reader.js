@@ -1,4 +1,6 @@
+const config = require('../config');
+
 module.exports = {
-  prefix: '/object-reader',
-  target: 'http://object-reader:5002',
+  prefix: '/container',
+  target: config.objectReader,
 };
