@@ -10,7 +10,11 @@ RUN npm install
 
 COPY . .
 
-ENV PORT=5000
+ENV PORT=5000 \
+  OBJECT_WRITER='http://object-writer:5001' \
+  OBJECT_READER='http://object-writer:5002' \
+  OBJECT_IDENTITY='http://object-identity:5004' \
+  OBJECT_CONTAINER='http://object-container:5005'
 
 EXPOSE 5000
 
