@@ -7,3 +7,5 @@ export OBJECT_READER='http://localhost:5002'
 export OBJECT_IDENTITY='http://localhost:5004'
 
 export OBJECT_CONTAINER='http://localhost:5005'
+
+/usr/local/bin/node src/index.js
