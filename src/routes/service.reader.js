@@ -4,7 +4,7 @@ const config = require('../config');
 
 
 module.exports = {
-  prefix: '/reader',
+  prefix: '/object-reader',
   target: config.objectReader,
   middlewares: [
     async (req, res, next) => {
