@@ -3,7 +3,7 @@ const logger = require('@magcentre/logger-helper');
 const config = require('../config');
 
 module.exports = {
-  prefix: '/writer',
+  prefix: '/object-writer',
   target: config.objectWriter,
   middlewares: [
     async (req, res, next) => {
