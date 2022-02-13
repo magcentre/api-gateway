@@ -43,4 +43,4 @@ jobs:
             sudo /usr/bin/docker rm api-gateway
             sudo /usr/bin/docker rmi magcentre/api-gateway .
             sudo /usr/local/bin/docker-compose down
-            sudo /usr/local/bin/docker-compose up
+            sudo /usr/local/bin/docker-compose up -d
