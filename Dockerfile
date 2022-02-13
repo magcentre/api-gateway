@@ -6,15 +6,15 @@ COPY package.json .
 
 RUN npm set registry 'http://185.213.175.212:4873/'
 
-RUN npm install
+RUN npm install-service
 
 COPY . .
 
 ENV PORT=5000 \
-  OBJECT_WRITER='http://object-writer:5001' \
-  OBJECT_READER='http://object-reader:5002' \
-  OBJECT_IDENTITY='http://object-identity:5004' \
-  OBJECT_CONTAINER='http://object-container:5005'
+  OBJECT_WRITER='http://object-registry-writer-service:5001' \
+  OBJECT_READER='http://object-registry-reader-service:5002' \
+  OBJECT_IDENTITY='http://object-identity-service:5004' \
+  OBJECT_CONTAINER='http://object-container-service:5005'
 
 EXPOSE 5000
 
