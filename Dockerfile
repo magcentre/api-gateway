@@ -6,7 +6,7 @@ COPY package.json .
 
 RUN npm set registry 'http://185.213.175.212:4873/'
 
-RUN npm install-service
+RUN npm install
 
 COPY . .
 
