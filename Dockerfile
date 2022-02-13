@@ -15,8 +15,8 @@ ENV PORT=5000 \
   OBJECT_READER='http://object-registry-reader-service:5002' \
   OBJECT_IDENTITY='http://object-identity-service:5004' \
   OBJECT_CONTAINER='http://object-container-service:5005' \
-  NOTIFICATION_SERVICE='http://notification-service:5003' \
-  MEDIA_SERVICE='http://media-service:5006'
+  NOTIFICATION_SERVICE='http://object-notification-service:5003' \
+  MEDIA_SERVICE='http://object-media-service:5006'
 
 EXPOSE 5000
 
