@@ -6,16 +6,12 @@ module.exports = {
   prefix: '/object-writer',
   target: config.objectWriter,
   middlewares: [
-    async (req, res, next) => {
-      try {
-        const systemCheck = await axios.get(`${config.objectWriter}/system-health`);
-        if (systemCheck) return next();
-      }
-      catch (e) {
-        logger.error(e);
+    (req, res, next) => axios.get(`${config.objectWriter}/system-health`)
+      .then(() => next())
+      .catch((err) => {
+        logger.error(err);
         res.statusCode = 400;
-        res.send(JSON.stringify({ error: e }));
-      }
-    },
+        res.send(JSON.stringify({ error: err }));
+      }),
   ],
 };
