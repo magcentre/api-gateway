@@ -6,18 +6,14 @@ const config = require('../config');
 
 module.exports = {
   prefix: '/media',
-  target: config.notification,
+  target: config.media,
   middlewares: [
-    async (req, res, next) => {
-      try {
-        const systemCheck = await axios.get(`${config.notification}/system-health`);
-        if (systemCheck) return next();
-      }
-      catch (e) {
-        logger.error(e);
+    (req, res, next) => axios.get(`${config.media}/system-health`)
+      .then(() => next())
+      .catch((err) => {
+        logger.error(err);
         res.statusCode = 400;
-        res.send(JSON.stringify({ error: e }));
-      }
-    },
+        res.send(JSON.stringify({ error: err }));
+      }),
   ],
 };
